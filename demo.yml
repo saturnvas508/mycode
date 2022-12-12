@@ -1,0 +1,16 @@
+ - name: create a directory then create a file inside it
+   hosts: bender, zoidberg, fry
+ 
+   tasks:
+
+   - name: create a directory
+     file: #module   
+        path: mynewdir
+        state: directory
+  
+
+
+   - name: create a file
+     copy: #module
+        dest: mynewdir/mynewfile.txt
+        content: "Mission siccessfull"
