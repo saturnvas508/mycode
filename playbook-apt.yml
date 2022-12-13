@@ -1,0 +1,14 @@
+ - name: Playbook - Install figlet by MAT
+   hosts: planetexpress:!frnsowrth
+   connection: ssh
+   gather_facts: yes
+
+   tasks:
+     - name: using apt to install figlet #lets try :)
+       apt:
+         name: figlet
+         state: present
+
+       become: yes
+
+
